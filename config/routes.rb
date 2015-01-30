@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tasks
+
   devise_for :users
   get '/about' => 'pages#about'
   # The priority is based upon order of creation: first created -> highest priority.
