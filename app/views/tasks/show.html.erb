@@ -6,7 +6,7 @@
 			<div class="panel-title">Your Task</div>
 		</div>
 		<div class="panel-body">
-			<%= @task.content %>
+			<%= raw(@task.content_html) %>
 		</div>
 	</div>
 	<%= link_to 'Edit', edit_task_path(@task) %>
