@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-6 col-md-offset-3">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @task.content %><br>
-  <strong>State:</strong>
-  <%= @task.state %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<div class="panel-title">Your Task</div>
+		</div>
+		<div class="panel-body">
+			<%= @task.content %>
+		</div>
+	</div>
+	<%= link_to 'Edit', edit_task_path(@task) %>
+	<%= link_to 'Back', tasks_path, class: "pull-right" %>
+</div>
